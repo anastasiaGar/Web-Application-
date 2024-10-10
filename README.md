@@ -1,4 +1,3 @@
 # RentalProject
 
-Logo img is now clickable and redirects back to home page
-Δεν εχω βαλει σωστα το grid layout,αν το εχεις με grid ασχολησου με αυτο
+This is a lightweight web application for navigating classified ads using HTML, CSS, and minimal JavaScript. The app allows users to browse categories and subcategories of ads.
