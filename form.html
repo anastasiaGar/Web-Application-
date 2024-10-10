@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="el">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Εγγραφή Χρήστη - Rent Nest</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="logo_img"><a href="index.html">Rent Nest</a></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Αρχική</a></li>
+          <li><a href="categories.html">Κατηγορίες</a></li>
+          <li><a href="about.html">Σχετικά με εμάς</a></li>
+          <li><a href="contact.html">Επικοινωνία</a></li>
+          <li><a href="form.html">Εγγραφή</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <form action="submit-form" method="post" id="userRegistrationForm">
+      <details>
+        <summary>Οδηγίες Συμπλήρωσης Φόρμας</summary>
+        <p>
+          Συμπληρώστε την φόρμα με τα στοιχεία σας και προαιρετικά απαντήστε στο
+          ερωτηματολόγιο
+        </p>
+      </details>
+      <fieldset>
+        <h3>Προσωπικά Στοιχεία</h3>
+        <label for="fullname">Ονοματεπώνυμο:</label>
+        <input type="text" id="fullname" name="fullname" required />
+
+        <label for="address">Διεύθυνση Κατοικίας:</label>
+        <input
+          type="text"
+          id="address"
+          name="address"
+          autocomplete="address-line1"
+        />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          autocomplete="email"
+        />
+        <label for="birthdate">Ημερομηνία Γέννησης:</label>
+        <input type="date" id="birthdate" name="birthdate" />
+
+        <label for="phone">Τηλέφωνο Επικοινωνίας:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          pattern="\d{10}"
+          title="Το τηλέφωνο δεν έχει 10 ψηφία."
+        />
+      </fieldset>
+      <!-- numbers must have 10 numbers -->
+      <fieldset>
+        <h3>Στοιχεία Ταυτοποίησης</h3>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          minlength="8"
+        />
+        <!-- password validation using minlenght-->
+
+        <label for="confirm_password">Επιβεβαίωση Password:</label>
+        <input
+          type="password"
+          id="confirm_password"
+          name="confirm_password"
+          required
+        />
+      </fieldset>
+
+      <fieldset>
+        <h3>Επιλογές Επικοινωνίας</h3>
+        <label>
+          <input type="checkbox" name="communication" value="email" />
+          Email
+          <input type="text" name="email_details" placeholder="Email Details" />
+        </label>
+        <label>
+          <input type="checkbox" name="communication" value="sms" />
+          SMS
+          <input type="text" name="sms_details" placeholder="SMS Details" />
+        </label>
+        <label>
+          <input type="checkbox" name="communication" value="viber" />
+          Viber
+          <input type="text" name="viber_details" placeholder="Viber Details" />
+        </label>
+        <label>
+          <input type="checkbox" name="communication" value="whatsapp" />
+          WhatsApp
+          <input
+            type="text"
+            name="whatsapp_details"
+            placeholder="WhatsApp Details"
+          />
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <h3>Ερωτηματολόγιο</h3>
+
+        <label for="ads_interest">Τύπος Αγγελιών που ενδιαφέρεσαι:</label>
+        <select id="ads_interest" name="ads_interest">
+          <option value="real_estate">Ακίνητα</option>
+          <option value="jobs">Εργασία</option>
+          <option value="vehicles">Οχήματα</option>
+          <option value="electronics">Ηλεκτρονικά</option>
+        </select>
+        <label for="referral">Πως εμαθες για εμας:</label>
+        <input list="how" id="referral" name="referral" autocomplete="off" />
+        <datalist id="how">
+          <option value="internet ads"></option>
+          <option value="facebook"></option>
+          <option value="Φιλο"></option>
+          <option value="twitter"></option>
+        </datalist>
+
+        <label for="preferred_areas">Περιοχή Ενδιαφέροντος:</label>
+        <input
+          list="areas"
+          id="preferred_areas"
+          name="preferred_areas"
+          autocomplete="off"
+        />
+        <datalist id="areas">
+          <option value="Αθήνα"></option>
+          <option value="Θεσσαλονίκη"></option>
+          <option value="Πάτρα"></option>
+          <option value="Ηράκλειο"></option>
+        </datalist>
+
+        <label for="vehicle_type">Αγαπημένη μάρκα αυτοκινήτου:</label>
+        <input type="text" id="vehicle_type" name="vehicle_type" />
+
+        <label for="frequency"
+          >Αγαπημένη ηλεκτρονική συσκευή(π.χ κινητό, pc ):</label
+        >
+        <input type="text" id="frequency" name="frequency" />
+      </fieldset>
+
+      <button type="submit">Εγγραφή</button>
+    </form>
+
+    <script src="validate-form.js"></script>
+  </body>
+</html>

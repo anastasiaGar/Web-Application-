@@ -1,0 +1,1038 @@
+/* Styles for visited links */
+nav ul li a:hover {
+  color: rgb(158, 159, 159); /* Color for visited links */
+}
+
+/* Styles for visited and active (clicked) links */
+nav ul li a:active {
+  color: rgb(158, 159, 159); /* Color for visited and clicked links */
+}
+* {
+  text-decoration: none;
+}
+/* Apply a background image to the body and set its properties */
+body {
+  margin: 0;
+  padding: 10;
+  background-color: #fff; /* Set the background color to white */
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Header, main content, footer */
+  grid-template-columns: 100%;
+  gap: 20px;
+}
+
+/* Style the header with a semi-transparent background and text */
+header {
+  background-color: #333;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2; /* Ensure header appears on top */
+}
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+  }
+
+  nav ul li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  nav a {
+    display: block; /* Καθιστά κάθε link block element */
+  }
+}
+
+header a {
+  color: white;
+}
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1px;
+  position: relative;
+  bottom: 0;
+}
+
+.footer-content {
+  max-width: 1200px;
+}
+
+/* Style the "Rent Nest" heading */
+header h1 {
+  color: #fff;
+  font-size: 36px;
+  margin: 0;
+}
+
+/* Style the navigation menu on the right */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: relative;
+  z-index: 2; /* Ensure menu appears on top */
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Style the slideshow container */
+.slideshow {
+  position: relative;
+  margin-top: 0%; /* Adjust this value to create space below the header */
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 60px); /* Adjust for the header's height */
+  z-index: 1; /* Ensure slideshow appears behind the content */
+  overflow: hidden;
+}
+
+/* Style your slides and their content */
+.slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Align text to the bottom of the slide */
+  opacity: 0;
+}
+
+/* Define keyframes for the animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Apply animation to the slides */
+.slide:nth-child(1) {
+  animation: fadeInOut 12s infinite 0s ease; /* Change 12s to adjust the duration of each slide */
+}
+
+.slide:nth-child(2) {
+  animation: fadeInOut 12s infinite 3s ease; /* Delay the start of the second slide by 3s */
+}
+.slide:nth-child(3) {
+  animation: fadeInOut 12s infinite 6s ease; /* Delay the start of the second slide by 3s */
+}
+.slide:nth-child(4) {
+  animation: fadeInOut 12s infinite 9s ease; /* Delay the start of the second slide by 3s */
+}
+
+.slide-content {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.slide h3 {
+  font-size: 24px;
+  margin: 0;
+  font-family: "Your-Font-Here", sans-serif;
+}
+
+.slide p {
+  font-size: 18px;
+  margin: 0;
+  color: #000;
+  font-family: "Your-Font-Here", sans-serif;
+}
+
+/* Style the navigation buttons */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.informations {
+  position: relative;
+  font-family: "Manrope", open sans;
+  font-size: 42px;
+  font-weight: 400;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1.2em;
+  letter-spacing: 0.5px;
+  word-spacing: 0em;
+
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  padding-top: 40px;
+}
+.informations p {
+  text-align: center;
+}
+.moreinformations {
+  text-align: center;
+  color: #400404;
+  font-family: "Open Sans", open sans;
+  font-size: 25px;
+  font-weight: 400;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.more {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #122430;
+}
+
+.more h1 {
+  font-size: 36px;
+  margin-bottom: 80px;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
+}
+
+.more h3 {
+  font-size: 24px;
+  display: inline-block;
+  margin: 0 200px;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(254, 254, 254, 0.5);
+}
+
+.more p {
+  font-size: 18px;
+  margin-top: 20px;
+  line-height: 1.5;
+  display: inline-block;
+  margin: 0 70px;
+  max-width: 400px;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
+}
+
+/* categories css */
+/* Βασική διάταξη για κινητά */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(
+    1,
+    minmax(250px, 1fr)
+  ); /* Ορίζει το ελάχιστο και το μέγιστο μέγεθος κάθε στήλης */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Media query για tablets   */
+@media (min-width: 600px) {
+  .categories {
+    grid-template-columns: repeat(2, minmax(250px, 1fr)); /* 2 στηλες */
+  }
+}
+
+/* Media query για desktops   */
+@media (min-width: 960px) {
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr)); /* 3 στηλες */
+
+    gap: 20px;
+  }
+}
+
+.categories ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categories li {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  max-width: 500px;
+}
+
+.categories h2 {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.categories img {
+  width: 100%; /* θα αλλάξει το μέγεθός του ανάλογα με το μέγεθος του παραθύρου */
+  height: auto;
+  object-fit: cover;
+}
+
+.categories ul ul {
+  padding: 10px;
+}
+
+.categories a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.categories a:hover {
+  background-color: #f4f4f4;
+}
+
+/* home-rentals css */
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+  color: #2e3d49;
+  margin-bottom: 20px;
+}
+
+.home__rentals {
+  text-align: center;
+}
+
+.all-boxes {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.rental-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: rgb(232, 232, 232);
+  border-radius: 8px;
+  width: 31%;
+  margin: 10px;
+}
+
+.rental-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Tablets  */
+@media (min-width: 500px) and (max-width: 800px) {
+  .rental-container {
+    width: calc(50% - 20px); /* 2 columns for tablets */
+  }
+}
+
+/*  Mobile Phones */
+@media (max-width: 500px) {
+  .rental-container {
+    width: 100%;
+  }
+  .all-boxes {
+    flex-direction: column;
+  }
+}
+
+.full-box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 4;
+}
+
+.info-box {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px; /* Add padding to the info-box */
+  border-radius: 8px;
+}
+
+.top-left {
+  position: relative;
+  float: left;
+  margin-right: 5px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  font-size: 13px;
+  padding: 0 7px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: transparent;
+  border: 1.5px solid hsla(0, 0%, 100%, 0.3);
+  border-radius: 5px;
+  z-index: 4;
+  line-height: 17px;
+  height: 32px;
+  font-weight: bold;
+}
+
+.top-right {
+  position: relative;
+  float: left;
+  margin-right: 5px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  font-size: 13px;
+  padding: 0 7px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: transparent;
+  border: 1.5px solid hsla(0, 0%, 100%, 0.3);
+  border-radius: 5px;
+  z-index: 4;
+  line-height: 17px;
+  height: 32px;
+  font-weight: bold;
+}
+
+.overlay:hover {
+  opacity: 0.5; /* Set the opacity to 1 on hover */
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+.item-info {
+  position: absolute;
+  bottom: 100px;
+  background-color: rgb(107 94 94 / 48%); /* Adjust the opacity as needed */
+  display: inline-block;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.text {
+  color: white; /* Text color inside the box */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.listing-details ul.details-list {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.listing-details .details-list li {
+  padding: 0 10px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* car-rentals css */
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+  color: #2e3d49;
+  margin-bottom: 20px;
+}
+
+.car__rentals {
+  text-align: center;
+}
+
+.boxes {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; 
+  justify-content: center;
+}
+
+.containers {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: space-between; /* Adjust as needed */
+  overflow: hidden;
+  background-color: rgb(232, 232, 232);
+  border-radius: 8px;
+  width: 31%;
+  margin: 10px;
+}
+
+.containers img {
+  width: 100%;
+  height: 100%; /* Ensure the image covers the entire parent div */
+  object-fit: cover;
+}
+
+/* Tablets  */
+@media (min-width: 500px) and (max-width: 800px) {
+  .containers {
+    width: calc(50% - 20px); /* 2 columns for tablets */
+  }
+}
+
+/*  Mobile Phones */
+@media (max-width: 500px) {
+  .containers {
+    width: 100%;
+  }
+  .boxes {
+    flex-direction: column;
+  }
+}
+
+.fbox {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 4;
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px; /* Add padding to the info-box */
+  border-radius: 8px;
+}
+
+.top-l {
+  position: relative;
+  float: left;
+  margin-right: 5px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  font-size: 13px;
+  padding: 0 7px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  background: transparent;
+  border: 1.5px solid hsla(0, 0%, 0%, 0.3);
+  border-radius: 5px;
+  z-index: 4;
+  line-height: 17px;
+  height: 32px;
+  font-weight: bold;
+}
+
+.top-r {
+  position: relative;
+  float: left;
+  margin-right: 5px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  font-size: 13px;
+  padding: 0 7px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  background: transparent;
+  border: 1.5px solid hsla(0, 0%, 0%, 0.3);
+  border-radius: 5px;
+  z-index: 4;
+  line-height: 17px;
+  height: 32px;
+  font-weight: bold;
+}
+
+.overlay:hover {
+  opacity: 0.5; /* Set the opacity to 1 on hover */
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+.info {
+  position: absolute;
+  bottom: 100px;
+  background-color: rgb(107 94 94 / 48%); /* Adjust the opacity as needed */
+  display: inline-block;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.texts {
+  color: white; /* Text color inside the box */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.listing-detail ul.detail-list {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.listing-detail .detail-list li {
+  padding: 0 10px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* about css */
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px; /* Smaller font size */
+  color: #2e3d49;
+  background-color: #e0e0e0;
+  padding: 8px; /* Smaller padding */
+  text-align: center;
+  margin-top: 20px; /* Smaller top margin */
+}
+
+.members {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px; /* Smaller padding */
+}
+
+.team_member_1,
+.team_member_2 {
+  flex: 1;
+  text-align: center;
+  margin: 10px;
+}
+
+.member_1,
+.member_2 {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px; /* Slightly larger padding */
+}
+
+.member_1 img,
+.member_2 img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px; /* Smaller bottom margin */
+}
+
+.member_1 h2,
+.member_2 h2 {
+  font-size: 20px; /* Smaller font size */
+  margin-bottom: 8px; /* Smaller bottom margin */
+}
+
+.member_1 p,
+.member_2 p {
+  color: #555;
+  font-size: 14px; /* Smaller font size */
+}
+
+
+/* about css */
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px; /* Smaller font size */
+  color: #2e3d49;
+  background-color: #e0e0e0;
+  padding: 8px; /* Smaller padding */
+  text-align: center;
+  margin-top: 20px; /* Smaller top margin */
+}
+
+.members {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px; /* Smaller padding */
+}
+
+.team_member_1,
+.team_member_2 {
+  flex: 1;
+  text-align: center;
+  margin: 10px;
+}
+
+.member_1,
+.member_2 {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px; /* Slightly larger padding */
+}
+
+.member_1 img,
+.member_2 img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px; /* Smaller bottom margin */
+}
+
+.member_1 h2,
+.member_2 h2 {
+  font-size: 20px; /* Smaller font size */
+  margin-bottom: 8px; /* Smaller bottom margin */
+}
+
+.member_1 p,
+.member_2 p {
+  color: #555;
+  font-size: 14px; /* Smaller font size */
+}
+
+/* about css */
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  color: #2e3d49;
+  background-color: #e0e0e0;
+  padding: 8px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Media query για tablets */
+@media (min-width: 600px) {
+  .members {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Media query για desktops   */
+@media (min-width: 960px) {
+  .members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-auto-flow: row dense;
+    gap: 20px;
+  }
+}
+
+.members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.team_member_1,
+.team_member_2 {
+  flex: 1;
+  text-align: center;
+  margin: 10px;
+}
+
+.member_1,
+.member_2 {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.member_1 img,
+.member_2 img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.member_1 h2,
+.member_2 h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.member_1 p,
+.member_2 p {
+  color: #555;
+  font-size: 14px;
+}
+
+/* contact-form css */
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.contact-form h2 {
+  grid-column: span 2;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.contact-form label {
+  font-weight: bold;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 15px 20px;
+  font-size: 16px;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* home-rentals-123 css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  bottom: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.ad_details_123 {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin-top: 20px;
+}
+
+.mySlides {
+  display: none;
+}
+.content-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pf-head {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+}
+
+.pf-head h5 {
+  margin: 0;
+}
+
+.pf-body {
+  padding: 15px;
+}
+
+.pf-body p {
+  margin: 0 0 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.pf-body span {
+  flex: 1;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Τρεις στήλες */
+  grid-template-rows: auto;
+  gap: 5px;
+}
+
+.grid-item {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+}
+
+.grid-item img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+.extra-comments {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.extra-comments p {
+  margin: 0 0 10px;
+}
+
+.back-button {
+  padding: 10px 20px;
+  background-color: #991818;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #45a049;
+}
+
+/* form */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+fieldset {
+  margin-bottom: 20px;
+  border: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.attempted-submit input:invalid {
+  border-color: red;
+}
+/* input red? */
